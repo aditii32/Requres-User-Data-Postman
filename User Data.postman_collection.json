@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "35d4a289-69e3-4eab-befe-525b7b4748ca",
+		"name": "User Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33643733",
+		"_collection_link": "https://www.postman.com/spacecraft-specialist-7984735/workspace/reqres/collection/33643733-35d4a289-69e3-4eab-befe-525b7b4748ca?action=share&source=collection_link&creator=33643733"
+	},
+	"item": [
+		{
+			"name": "List Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SINGLE USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/users/2",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SINGLE USER NOT FOUND",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/users/23",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST <RESOURCE>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/unknown",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"unknown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SINGLE <RESOURCE>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/unknown/2",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"unknown",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SINGLE <RESOURCE> NOT FOUND",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/unknown/23",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"unknown",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/users",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/users/2",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/users/2",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/users/2",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER - SUCCESSFUL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Baseurl}}/api/register",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER - UNSUCCESSFUL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/register",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN - SUCCESSFUL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Baseurl}}/api/login",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN - UNSUCCESSFUL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"peter@klaven\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Baseurl}}/api/login",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELAYED RESPONSE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Baseurl}}/api/users?delay=3",
+					"host": [
+						"{{Baseurl}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "delay",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "Baseurl",
+			"value": "https://reqres.in"
+		}
+	]
+}
